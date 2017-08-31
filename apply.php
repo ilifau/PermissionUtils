@@ -17,4 +17,4 @@ $p->login();
  * Permission Patches
  ********************/
 
-$p->applyPatch('ilPermissionPatches.initInteractiveVideo');
+//$p->applyPatch('ilPermissionPatches.initInteractiveVideo');
