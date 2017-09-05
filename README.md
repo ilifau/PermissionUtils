@@ -5,7 +5,7 @@ GPLv3, see LICENSE
 
 Author: Fred Neumann <fred.neumann@fau.de>
 
-Supported versions: ILIAS 5.2
+Supported versions: ILIAS 5.1 (branch ilias51),  ILIAS 5.2 (branch master)
 
 **This add-on is provided WITHOUT WARRANTY and should be used by experienced ILIAS admins. Please backup your database before!** 
 
