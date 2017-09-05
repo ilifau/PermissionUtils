@@ -18,7 +18,7 @@ class ilPatchUtils
 
 		if($_SERVER['argc'] < 4)
 		{
-			die("Usage: apply_patches.php username password client\n");
+			die("Usage: apply.php username password client\n");
 		}
 
 		// initialize like a cron job
