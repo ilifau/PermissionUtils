@@ -13,7 +13,7 @@ Supported versions: ILIAS 5.1 (branch ilias51),  ILIAS 5.2 (branch master)
 
 New ILIAS versions or ILIAS plugins may introduce new object types that need a setting of their default permissions in existing roles and role templates. Additionally the existing container objects need an initialization of the create permissions for the new types. Setting these manually can be expensive or even impossible, if an installation uses many local roles.
 
-The solution of this add-on tries to automate this by copying the permissions of the new object types from existing similar object types. An InteractiveVideo plugin, for example may be seen as similar to a MediaCast. Therefore everyone who has the create permission for a MediaCast should be able to create an InteractiveVideo. And everyone who has write permission in a MediaCast should have write permission in an InteractiveVideo if objects of this type are already created.
+The solution of this add-on tries to automate this by copying the permissions of the new object types from existing similar object types. An InteractiveVideo plugin, for example may be seen as similar to a MediaCast. Therefore everyone who has the create permission for a MediaCast in a course should be able to create an InteractiveVideo in this course. And everyone who has default write permission on MediaCasts in a course should have write permission in new InteractiveVideo objects created in this course.
 
 ## Installation and Usage
 
@@ -61,7 +61,7 @@ INNER JOIN rbac_operations op ON ta.ops_id = op.ops_id
 ORDER BY ob.title, op.class, op.op_order
 ```
 
-This query gives you the defined permissions that are new in ILIAS 5.2 compared to ILIAS 5.1. You must have databases of both versions on your server. Please chhange the database names to those of yours:
+This query gives you the defined permissions that are new in ILIAS 5.2 compared to ILIAS 5.1. You must have databases of both versions on your server. Please change the database names to those of yours:
 ```sql
 SELECT ob.title, ob.description, op.operation, op.description
 FROM ilias52.object_data ob
